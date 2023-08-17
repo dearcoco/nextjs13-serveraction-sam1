@@ -96,4 +96,4 @@ delete 기능은 서버액션으로 쉽게 구현이 가능하다.
 edit 기능은 조금 복잡한데 일단 UI는 post를 생성하던 PostForm 컴포넌트를 공유해서 사용하기로 하고,
 PostCard에서 props로 받은 post 객체를 PostForm으로 전달하기 위해서 zustand로 useEditPostStore를 만든다.
 
-9. search, sort, pagination 기능을 차례로 구현한다. 이 컴포넌트들의 특징은 router의 push()를 사용하는데 편리하게 관리하기 위해서 useCustomRouter를 만든다. 이제 Feature 컴포넌트와 Pagination 컴포넌트를 구현한다.
+9. search, sort, pagination 기능을 차례로 구현한다. 이 컴포넌트들의 특징은 router의 push()를 사용하는데, searchParams를 편리하게 관리하기 위해서 useCustomRouter를 만든다. 이제 Feature 컴포넌트와 Pagination 컴포넌트를 구현한다.
