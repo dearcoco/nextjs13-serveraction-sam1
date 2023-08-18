@@ -11,10 +11,11 @@ export default async function DetailPage({params: {id} , searchParams}:{
     const post = await getOnePost(id);
 
     return (
-
         <div>
-            <h3>{post.title}</h3>
-            <Image src={post.image} alt='image' width={200} height={200} priority />
+            <div>{post.title}</div>
+            <div style={{width: '500px', height: '500px', position: "relative", border: 'solid 1px'}}>
+                <Image src={post.image} alt='image' fill style={{objectFit: 'contain',}} />
+            </div>
         </div>
     );
 }

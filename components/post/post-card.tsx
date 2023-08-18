@@ -21,7 +21,9 @@ const PostCard = ({post}: {post: IPost}) => {
     return (
         <div>
             <Link href={`/post/${post.id}`}>
-                <Image src={post.image} alt='image' width={200} height={200} priority />
+                <div style={{width: '200px', height: '200px', position: 'relative', border: 'solid 1px'}}>
+                    <Image src={post.image} alt='image' fill style={{objectFit: 'contain',}} />
+                </div>
                 <h3>{post.title}</h3>
             </Link>
             <div style={{display:'flex', gap: 20}}>
